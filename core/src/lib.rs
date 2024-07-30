@@ -12,7 +12,7 @@ pub fn test() {
 }
 
 #[wasm_bindgen]
-struct WebSimc {
+pub struct WebSimc {
     rogue: Rogue
 }
 
@@ -22,5 +22,9 @@ impl WebSimc {
         Self {
             rogue: Rogue::new()
         }
+    }
+
+    pub fn say_hi() -> String {
+        "Hello World".to_string()
     }
 }
